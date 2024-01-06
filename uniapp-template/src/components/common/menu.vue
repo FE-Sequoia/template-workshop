@@ -7,12 +7,14 @@
 -->
 <template>
 	<view class="menu_list">
-		<view v-if="$check_action(o[vm.url],'get')" v-for="(o, i) in list" :key="i" class="item_menu">
-			<navigator :url="'/pages'+o[vm.url]" class="menu" hover-class="hover">
-				<image class="image" :src="$fullImgUrl(o[vm.img])" mode="widthFix"></image>
-				<text class="name">{{ o[vm.name] }}</text>
-			</navigator>
-		</view>
+		<template v-if="$check_action(o[vm.url],'get')">
+			<view v-for="(o, i) in list" :key="i" class="item_menu">
+				<navigator :url="'/pages'+o[vm.url]" class="menu" hover-class="hover">
+					<image class="image" :src="$fullImgUrl(o[vm.img])" mode="widthFix"></image>
+					<text class="name">{{ o[vm.name] }}</text>
+				</navigator>
+			</view>
+		</template>
 	</view>
 </template>
 
