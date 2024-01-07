@@ -572,6 +572,15 @@ page .container .confirm-btn {
 .support_module .button-area {
   justify-content: center !important;
 }
+.bar_settle {
+  padding: 0 !important;
+  .settle {
+    width: 80px;
+    height: 50px;
+    margin-right: -8px;
+    background-color: #294d7c;
+  }
+}
 .bar_settle .choose_btn.active {
   color: #8cb9f3 !important;
 }
@@ -584,8 +593,9 @@ page .container .confirm-btn {
   color: #8cb9f3 !important;
 }
 .bar_settle .btn_settle {
-  background-color: #ebf4ff !important;
-  color: #8cb9f3 !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  border: none !important;
 }
 .item_order .state,
 #order_details .state {
@@ -1288,31 +1298,33 @@ html {
 .Author {
   border-radius: 50%;
   margin: 10rpx;
+  width: 38px !important;
+  height: 38px !important;
 }
 .Author uni-button::after {
   border: none;
 }
 
 .Authorization-page .Author .Author-qier {
-  background: url("/static/img/qe.png") no-repeat;
-  background-size: auto;
+  background: #fff url("/static/img/qe.png") no-repeat center center;
+  background-size: 38px 38px;
   height: inherit;
-  background-position-x: 10px;
-  background-position-y: 11px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .Authorization-page .Author .Author-weixin {
-  background: url("/static/img/weixin.png") no-repeat;
-  background-size: auto;
+  background: #fff url("/static/img/weixin.png") no-repeat center center;
+  background-size: 34px 34px;
   height: inherit;
-  background-position-x: 10px;
-  background-position-y: 11px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .Authorization-page .Author .Author-weibo {
-  background: url("/static/img/weibo.png") no-repeat;
-  background-size: auto;
+  background: #fff url("/static/img/weibo.png") no-repeat center center;
+  background-size: 38px 38px;
   height: inherit;
-  background-position-x: 10px;
-  background-position-y: 11px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .aut-box .btn-n-box .btn,
 .uni-popup__wrapper-box .btn {
