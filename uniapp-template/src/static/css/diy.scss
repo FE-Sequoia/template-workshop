@@ -70,38 +70,42 @@ image {
 .account_login.container {
   min-height: 100vh;
   height: auto !important;
+  padding-top: 150px !important;
 }
 .account_login.container,
 .forgot_account.container {
-  background-color: #ffffff !important;
+  background-image: linear-gradient(#66a6ff 0%, #89f7fe 100%) !important;
 }
 // 登录框
 .account_login.container .wrapper {
-  background: #ffffff !important;
-  width: 80%;
-  // margin: 10px auto;
+  background: rgba(255, 255, 255, .3) !important;
+  margin: 15px;
   position: relative;
-  top: 0px;
-  left: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
 }
 .account_login .input-content {
-  width: 100%;
-  padding: 0px !important;
+  padding: 30px 15px 0 !important;
+  .input-item input {
+    height: 80rpx !important;
+    line-height: 80rpx !important;
+  }
 }
 // 标题
 .top-sign-title {
-  // background-color:#57bc90 ;
-  color: #222;
+  color: #FFF;
   text-align: center;
   font-size: 19px;
   font-weight: 600;
-  // border-bottom: 2px dashed #fd9191;
   padding-bottom: 10px;
-  // writing-mode: vertical-lr;
-  // position: absolute;
-  // left: 320px;
-  border-bottom: 1px solid #a5a5af;
-  margin-bottom: 30px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;  
+}
+.back-btn {
+  display: none !important;
 }
 // login
 .left-top-sign {
@@ -112,9 +116,11 @@ image {
 }
 // 欢迎回来
 .welcome {
-  color: #77c9d4 !important;
+  color: #fff !important;
   text-shadow: none !important;
-  display: none;
+  left: 34px !important;
+  top: -90px !important;
+  display: none !important;
 }
 // 装饰
 .right-top-sign::before,
@@ -128,41 +134,54 @@ image {
 // 输入框
 .input-content {
   margin-top: 10px;
+  width: auto !important;
 }
 // 用户名输入框
 .input-item {
-  background-color: #fff !important;
+  background-color: transparent !important;
   flex-direction: row !important;
-  height: 50px !important;
+  height: 38px !important;
   padding: 0 !important;
-  line-height: 50px !important;
-  border: 1px solid #eee;
+  line-height: 38px !important;
+  border: 1px solid #fff;
+  min-height: auto !important;
+  border-radius: 20px !important;
+
 }
 .account_login .input-item .tit {
   display: none;
 }
 .account_login .input-item {
   padding-left: 10px !important;
+  margin-bottom: 15px !important;
+  border-radius: 20px !important;
 }
 // 用户名字段
 .input-item .tit {
-  width: 35% !important;
+  width: 25% !important;
   padding-left: 5px;
-  height: 50px !important;
-  // padding: 0 !important;
-  line-height: 50px !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  text-align: right !important;
+  text-align-last: right !important;
+  margin-right: 0 !important;
+  font-size: 12px !important;
 }
 .input-item .uni-input-wrapper {
-  height: 50px !important;
-  // padding: 0 !important;
-  line-height: 50px !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  .uni-input-input {
+    padding-left: 5px !important;
+  }
+}
+.uni-easyinput__content-input {
+  padding: 0 15px 0 0 !important;
 }
 // 登录按钮
 page .container .confirm-btn {
-  // background-color:#00bbf0;
+  background-color:#F30 !important;
   color: #fff !important;
   width: 60%;
-  // border-radius: 0;
   font-size: 14px;
 }
 .confirm-btn::after {
@@ -172,19 +191,38 @@ page .container .confirm-btn {
   content: ":";
 }
 .uni-input-placeholder {
-  font-size: 13px;
+  font-size: 12px;
+  color: #666;
 }
 // 人脸识别
 .face-login {
-  position: relative;
-  // top: 400px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 999;
   display: flex;
-  // height: 200px;
-  width: 90%;
+  border-radius: 20px;
+  margin: 0 15px;
   background-color: #fff !important;
   padding: 10px;
   flex-direction: column;
   align-items: center;
+
+  .face-img,
+  .face-camera {
+    width: 200px !important;
+
+    camera {
+      height: 200px !important;
+      margin: 0 0 15px 0!important;
+    }
+    .btn_add_img {
+      width: 198px !important;
+      height: 198px !important;
+      margin: 0 0 15px 0!important;
+    }
+  }
 }
 .face-login button {
   width: 59%;
@@ -198,9 +236,19 @@ page .container .confirm-btn {
 #canvasElement {
   height: 50px !important;
 }
+.btn_add_img {
+  height: 118px;
+  width: 118px;
+  margin: 10px;
+  border: 1px dashed #66a6ff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #66a6ff;
+}
 .btn_add_img text {
   font-size: 40px;
-  margin-left: 135px !important;
 }
 .face-login .uni-video-cover-play-button,
 .face-login .uni-video-cover-duration {
@@ -211,14 +259,13 @@ page .container .confirm-btn {
 }
 // 忘记密码按钮
 .forget-section {
-  // background-color:#00bbf0 ;
-  color: #222 !important;
+  color: #333 !important;
   text-align: right !important;
-  margin-left: 23px;
-  width: 100%;
-  height: 10px;
-  line-height: 10px;
+  margin-top: 0 !important;
+  height: 40px;
+  line-height: 40px;
   font-size: 14px !important;
+  padding: 0 15px;
 }
 // 还没有账号
 .account_login .register-section {
@@ -231,7 +278,8 @@ page .container .confirm-btn {
   //     z-index: 9999;
 }
 .input-item uni-input {
-  height: 50px !important;
+  height: 35px !important;
+  font-size: 12px !important;
 }
 // 马上注册
 .register-section .text {
@@ -239,11 +287,14 @@ page .container .confirm-btn {
 
 // 忘记密码页面
 .forgot_account.container .wrapper {
-  background: #ffffff !important;
-  width: 100%;
-  // margin: 10px auto;
+  background: rgba(255, 255, 255, .3) !important;
+  margin: 0 15px;
   position: absolute;
+  border-radius: 35px;
   top: 100px;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
 }
 // 发送按钮
 .forgot_account .btn_send {
@@ -254,7 +305,7 @@ page .container .confirm-btn {
 .forgot_account .register-section {
   position: absolute;
   top: 510px;
-  // background-color:#ff4c3b ;
+  // background-color:#ebf4ff ;
   // color: #fff !important;
   // height: 40px;
   // line-height: 40px;
@@ -265,15 +316,32 @@ page .container .confirm-btn {
 
 // 注册页
 #account_register {
-  // background-image:url("/static/img/body_bg.jpg" ) !important;
-  // background-size: 100% 100% !important;
+  background-image: linear-gradient(#66a6ff 0%, #89f7fe 100%) !important;
+
+  picker,
+  uni-picker {
+    border: none !important;
+    font-size: 12px !important;
+    color: #666 !important;
+  }
+
+  .mm_container {
+    padding-bottom: 12rem !important;
+  }
+  .diy_field.diy_img {
+    height: 140px !important;
+  }
+}
+.uni-picker-container .uni-picker-custom {
+  bottom: 231px !important;
 }
 // uni-page-wrapper{
 // background-color: #77c9d4 !important;
 // }
 #account_register .mm_container .row .register_view {
-  background: #ffffff !important;
+  background: rgba(255, 255, 255, 0.3) !important;
   width: 100%;
+  border-radius: 20px;
 }
 /* 注册页 头部 ‘注册’ 框 */
 #account_register .title {
@@ -298,8 +366,8 @@ page .container .confirm-btn {
   margin: 10px auto !important;
   /* 宽度 */
   width: 60%;
-  background-color: #ff4c3b !important;
-  color: #fff !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
   border-radius: 30px !important;
 }
 #account_register .diy_title {
@@ -328,7 +396,9 @@ page .container .confirm-btn {
 
 // 注册页用户名
 .uni-forms-item__inner .uni-forms-item__label {
-  color: #606266 !important;
+  color: #666 !important;
+  justify-content: flex-end !important;
+  font-size: 12px !important;
 }
 .uni-forms-item__inner .uni-forms-item__label::after {
   content: ":";
@@ -351,107 +421,113 @@ page .container .confirm-btn {
   width: 78% !important;
 }
 #account_register .uni-forms-item {
-  // background-color: #f1f1f1 !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+
+  .is-input-border {
+    border: none !important;
+  }
 }
 // 忘记密码
 .btn_send {
   background-color: #d8c5c6 !important;
 }
 // 首页
-
 .home--new .swiper {
-  height: 250px !important;
+  height: 180px !important;
 }
 #home .menu_list {
   background-color: #fff !important;
+  justify-content: flex-start !important;
+}
+.menu_list .item_menu {
+  width: 25%;
+  margin: 0 !important;
+}
+.menu_list .item_menu .menu {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 10px;
 }
 .menu_list .item_menu .menu image {
-  opacity: 0;
-  // // margin-right: 10px;
-  // position: relative;
-  // left: 15px;
+  display: none;
 }
 .menu_list .item_menu .name {
-  color: #222;
-  font-size: 13px !important;
-  border-radius: 10%;
-  width: 66px;
+  color: #333;
+  font-size: 12px !important;
   display: inline-block;
 }
 .menu_list .item_menu:nth-child(1) {
-  background: url("/static/img/tab_1.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_1.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 .menu_list .item_menu:nth-child(2) {
-  background: url("/static/img/tab_2.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_2.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 .menu_list .item_menu:nth-child(3) {
-  background: url("/static/img/tab_9.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_9.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 .menu_list .item_menu:nth-child(4) {
-  background: url("/static/img/tab_6.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_6.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 .menu_list .item_menu:nth-child(5) {
-  background: url("/static/img/tab_5.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_5.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 #home .menu_list .item_menu:nth-child(6) {
-  background: url("/static/img/tab_3.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_3.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 #home .menu_list .item_menu:nth-child(7) {
-  background: url("/static/img/tab_7.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_7.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 #home .menu_list .item_menu:nth-child(8) {
-  background: url("/static/img/tab_4.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_4.png") center 20% no-repeat !important;
+  background-size: 30% !important;
 }
 
 #home .menu_list .item_menu:nth-child(9) {
-  background: url("/static/img/tab_4.png") top center no-repeat !important;
-  background-size: 80% !important;
+  background: url("/static/img/tab_4.png") center 20% no-repeat !important;
+  background-size: 30% !important;
+}
+
+.swiper_notice .notice {
+  margin-left: 0 !important;
 }
 
 // 首页新闻模块
-
 #home .card-title {
-  // background: #a5a5af !important;
   color: #222 !important;
-  padding: 5px 10px;
-  // border-radius: 10px;
-  // 	border-bottom: 2px solid #015249 !important;
-
-  // border-left:  4px solid #015249 !important;
-  // border-right: 4px solid #015249 !important;
+  padding: 5px 0;
+  font-size: 14px !important;
 }
 
 #home .card-title .more {
+  font-size: 12px;
+  padding: 2px 8px;
 }
 #home .uni-card .item,
 #article_list .item {
-  // background-image: url("/static/img/ar.png")  !important;
-  // background-size: 100% 100% !important;
-  // margin-top: 5px;
   width: 100%;
-  // flex-direction: column;
-  // height: 272px;
-  // padding-left: 0;
-  // padding: 24px;
-  // flex-direction: row-reverse;
+  flex-direction: row-reverse;
   border-bottom: 1px solid #f1f1f1;
+  padding: 0 !important;
 }
 
 // 图片
 #home .uni-card .item .image,
 #article_list .item .image {
-  margin-right: 10px;
+  margin: 5px 0 !important;
+  border-radius: 4px;
 }
 #home .uni-card .item .right_block {
-  padding-right: 15px;
+  padding-right: 8px;
 }
 // 标题
 #home .uni-card .item .top_info,
@@ -473,11 +549,18 @@ page .container .confirm-btn {
 }
 
 // 商城模块
+.list_goods .goods_item {
+  width: calc(50% - 16px) !important;
+
+  image {
+    border-radius: 4px;
+  }
+}
 .list_goods .goods_item .bottom .icon_cart {
-  color: red !important;
+  color: #3d5e88 !important;
 }
 .list_goods .goods_item .bottom .price {
-  color: red !important;
+  color: #3d5e88 !important;
 }
 .sales {
   display: none;
@@ -490,20 +573,23 @@ page .container .confirm-btn {
   justify-content: center !important;
 }
 .bar_settle .choose_btn.active {
-  color: #ff4c3b !important;
+  color: #8cb9f3 !important;
 }
 .list_cart .choose_btn.active .btn_circle {
-  background-color: #ff4c3b !important ;
+  background-color: #ebf4ff !important ;
+  color: #8cb9f3 !important;
 }
 .bar_settle .choose_btn.active .btn_circle {
-  background-color: #ff4c3b !important ;
+  background-color: #ebf4ff !important ;
+  color: #8cb9f3 !important;
 }
 .bar_settle .btn_settle {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .item_order .state,
 #order_details .state {
-  color: #ff4c3b !important;
+  color: #8cb9f3 !important;
 }
 // 自定义模块
 .list_diy .uni-card__content {
@@ -514,17 +600,20 @@ page .container .confirm-btn {
   // background-color: #77c9d4;
 }
 .pay_model button {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .box_wrap {
   margin-top: 5px;
-  padding: 0 15px;
+  padding: 0 15px !important;
+}
+.list_website_announcement {
+  margin-bottom: 0 !important;
 }
 .card-title .more {
-  background-color: #ff4c3b;
+  background-color: #ebf4ff;
   padding: 2px;
-  border-radius: 5px;
-  color: #fff !important;
+  color: #8cb9f3 !important;
 }
 #home .list_com--new .box_wrap .box_style {
   border: 1px solid #f1f1f1 !important;
@@ -566,6 +655,7 @@ page .container .confirm-btn {
 .diy_list .warp .row .diy_img image {
   height: 200px !important;
   width: 100%;
+  border-radius: 4px;
 }
 .list_com--new .box_wrap .box_style .view,
 .diy_list .warp .row .view {
@@ -576,15 +666,12 @@ page .container .confirm-btn {
 .list_com--new .box_wrap .box_style .view .diy_field,
 .diy_list .warp .row .view .diy_field {
   border: none;
-  margin-top: 2px !important;
+  margin-top: 0 !important;
 }
 .list_com--new .box_wrap .box_style .view .title,
 .diy_list .warp .row .view .diy_title {
-  color: #222 !important;
-  font-weight: 400 !important;
-  // background-color: #57bc90 !important;
-  font-size: 14px !important;
-  margin-right: 3px !important;
+  color: #333 !important;
+  font-size: 12px !important;
 }
 .list_com--new .box_wrap .box_style .view .title::after {
   content: ":";
@@ -610,8 +697,8 @@ page .container .confirm-btn {
   background-color: #fff !important;
 }
 .diy_list .btn-primary {
-  background-color: #ff4c3b !important;
-  color: #fff !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .diy_list .wt-tabs__container {
 }
@@ -661,7 +748,8 @@ page .container .confirm-btn {
   background-color: #979ca1 !important;
 }
 .diy_detail.diy_detail--new .comment_title {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .diy_detail .time_type {
   color: #222;
@@ -674,7 +762,8 @@ page .container .confirm-btn {
   content: ":";
 }
 .btn_publish {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 #comment_edit .btn_publish {
   width: 150px;
@@ -705,9 +794,9 @@ page .container .confirm-btn {
   top: 0px;
 }
 .diy_edit .btn_submit {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
   width: 120px;
-  color: #fff;
+  color: #8cb9f3 !important;
   margin-bottom: 10px;
 }
 .diy_edit .diy_title {
@@ -717,7 +806,8 @@ page .container .confirm-btn {
 // 论坛页面列表
 // 发布按钮
 .page_forum .change .button {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .page_forum .list .item {
   // background-image:url("/static/img/cart.png")  !important;
@@ -748,8 +838,8 @@ page .container .confirm-btn {
   // color: #FFF;
 }
 #forum_details .link {
-  background-color: #ff4c3b !important;
-  color: #fff;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
   width: 60% !important;
   margin: 4px auto;
 }
@@ -812,14 +902,14 @@ page .container .confirm-btn {
 }
 // 默认按钮
 #user_address .tag_default {
-  background-color: #ff4c3b !important;
-  color: #fff;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
   border: none !important;
 }
 // 新建收货地址按钮
 #user_address .btn_address {
-  background-color: #ff4c3b !important;
-  color: #fff !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 // 新建收货地址
 
@@ -835,13 +925,13 @@ page .container .confirm-btn {
   // padding: 30px;
 }
 #user_address_edit .btn_save {
-  background-color: #ff4c3b !important;
-  color: #fff !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 // 收藏
 .item_collect .btn_del {
-  background-color: #ff4c3b !important;
-  color: #fff !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
   border: none !important;
 }
 .btn_del::after {
@@ -853,8 +943,8 @@ page .container .confirm-btn {
 // 退出按钮
 .page_user--new .btn_logout,
 .page_user--new .btn_login {
-  background: #ff4c3b !important;
-  color: #fff;
+  background: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 
 /*我的列表页 */
@@ -919,7 +1009,8 @@ page .container .confirm-btn {
   display: inline-block;
   width: 100%;
   text-align: center;
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .diy_table .warp .container .diy_img img {
   width: 100%;
@@ -1020,7 +1111,8 @@ page .container .confirm-btn {
 }
 
 .confirm-btn {
-  background-color: #ff4c3b !important ;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .uni-body
   .uni-app--maxwidth
@@ -1041,7 +1133,12 @@ page .container .confirm-btn {
 .uni-select__selector {
   z-index: 9999 !important;
 }
-
+.uni-card {
+  margin: 8px !important;
+}
+.uni-card__content--pd {
+  padding: 8px !important;
+}
 #home .uni-card .title {
   font-size: 14px;
   color: #222;
@@ -1049,6 +1146,12 @@ page .container .confirm-btn {
 #home .uni-card .diy_field {
   font-size: 22rpx;
   color: #333;
+}
+.uni-stat__select {
+  min-width: 100px !important;
+}
+.diy_list_page .box_style {
+  padding: 0 !important;
 }
 .diy_list_page .box_style .diy_title {
   font-size: 24rpx;
@@ -1063,7 +1166,8 @@ page .container .confirm-btn {
 }
 
 .diy_view .form_button .primary_btn {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
+  color: #8cb9f3 !important;
 }
 .diy_list .warp {
   flex-direction: column;
@@ -1099,7 +1203,7 @@ page .container .confirm-btn {
 }
 
 .list .item .right_block {
-  min-width: 254px;
+  // min-width: 254px;
 }
 .uni-forms-item__label {
   min-width: 70px !important;
@@ -1145,8 +1249,8 @@ html {
 }
 // 答题按钮
 #exam_list .table--border .answer_link {
-  background-color: #ff4c3b;
-  color: #fff;
+  background-color: #ebf4ff;
+  color: #8cb9f3 !important;
   width: 40px;
   height: 20px;
   line-height: 20px;
@@ -1167,7 +1271,8 @@ html {
   padding-left: 90px;
 }
 #exam_details .answer_btn_submit {
-  background-color: #ff4c3b;
+  background-color: #ebf4ff;
+  color: #8cb9f3 !important;
 }
 .uni-icons {
   left: -20px;
@@ -1237,48 +1342,70 @@ html {
   margin-bottom: 0.625rem;
 }
 #message_list .button {
-  background-color: #ff4c3b;
+  background-color: #ebf4ff;
   width: 120px;
   height: 40px;
   line-height: 40px;
   margin: 10px auto;
   text-align: center;
-  color: #fff;
+  color: #8cb9f3 !important;
 }
 .list_message {
   width: 95%;
   margin-left: 10px;
 }
 .item_message {
-  border: 0.0625rem solid #eee;
-  margin: 10px auto;
-  padding: 5px 15px;
+  border: 1px solid #eee;
+  margin: 8px auto;
+  padding: 5px 8px;
 }
 .item_message .title {
-  font-size: 19px;
-  margin-bottom: 10px;
+  font-size: 16px;
 }
 .item_message .user_info {
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.0625rem dashed #eee;
-  margin-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+  padding: 5px 0;
+  color: var(--color_grey);
 }
 .item_message .time {
   font-size: 14px;
 }
 .item_message .content {
-  font-size: 1.0625rem;
+  font-size: 14px;
+  color: #999;
+}
+.item_message .list_reply_block {
+  margin-top: 15px;
+
+  view:first-child {
+    color: #666;
+    font-size: 14px;
+  }
+  .list_reply_box {
+    border-top: 1px dashed #eee;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+}
+.uni-pagination {
+  padding: 0 10px !important;
+
+  .uni-pagination__btn {
+    opacity: 0.5 !important;
+  }
 }
 #user_password .button {
-  background-color: #ff4c3b;
+  background-color: #ebf4ff;
   width: 150px;
-  color: #fff;
+  color: #8cb9f3 !important;
 }
 .btn_right {
-  background-color: #ff4c3b !important;
+  background-color: #ebf4ff !important;
   // width: 150px;
-  color: #fff !important;
+  color: #8cb9f3 !important;
 }
 .nav_left {
   background-color: #7c7f7e !important;
