@@ -599,7 +599,7 @@ page .container .confirm-btn {
 }
 .item_order .state,
 #order_details .state {
-  color: #8cb9f3 !important;
+  color: #24446f !important;
 }
 // 自定义模块
 .list_diy .uni-card__content {
@@ -713,7 +713,17 @@ page .container .confirm-btn {
 .diy_list .wt-tabs__container {
 }
 .diy_list .wt-tabs__container .wt-tabs__container-item {
-  color: #222 !important;
+  color: #666 !important;
+}
+
+.wt-tabs {
+  display: flex;
+  padding: 0 20rpx;
+  .wt-tabs__container-item.selected {
+    border-color: #24446f !important;
+    color: #24446f !important;
+    border-radius: 50rpx;
+  }
 }
 // 自定义模块详情页
 
@@ -1483,4 +1493,25 @@ html {
 }
 #exam_list .change .button {
   width: 30% !important;
+}
+.goods_list {
+  .time {
+    position: static !important;
+    color: #666 !important;
+    font-size: 24rpx !important;
+    uni-text {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+  
+  .price {
+    font-size: 24rpx !important;
+    color: #f30 !important;
+  }
+  
+  .num {
+    font-size: 24rpx !important;
+  }
 }
