@@ -174,8 +174,16 @@ image {
     padding-left: 5px !important;
   }
 }
+.uni-select,
+.uni-easyinput__content {
+  min-height: 60rpx !important;
+  border-radius: 40rpx !important;
+  font-size: 24rpx !important;
+  color: #666;
+}
 .uni-easyinput__content-input {
-  padding: 0 15px 0 0 !important;
+  padding: 0 20rpx 0 !important;
+  font-size: 24rpx !important;
 }
 // 登录按钮
 page .container .confirm-btn {
@@ -1036,9 +1044,16 @@ page .container .confirm-btn {
 // 添加修改按钮
 .diy_table_tml .container .table_padding_bottom .btn_right,
 .diy_table_tml .table_padding_top .nav_left {
-  // background: url("/static/img/more.png") top center no-repeat !important;
-  // background-size: 100% 100% !important;
-  // color: #015249 !important;
+  background-color: #3885cc !important;
+  color: #fff !important;
+}
+.diy_table_tml .table_padding_top {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+}
+.diy_table .container {
+  
 }
 // 商城用户列表“详情”按钮上面的“删除”按钮
 .diy_table .delete_a_btn {
@@ -1049,7 +1064,6 @@ page .container .confirm-btn {
   height: 20px;
   /* display: flex; */
 
-  margin: 5px -5px 5px 103px;
   // background: url("/static/img/more.png") top center no-repeat !important;
   // background-size: 100% 100% !important;
   color: red !important;
@@ -1064,14 +1078,23 @@ page .container .confirm-btn {
 }
 .diy_table_tml .container .row {
   border: 1px solid #f1f1f1;
-  width: 42%;
-  min-width: 42%;
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   padding: 5px;
   border-radius: 8px;
   margin: 10px 5px 0 5px;
   font-size: 14px;
+  
+  .create_time_block {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100%;
+    
+    uni-button {
+      margin: 0 20rpx 0 0;
+    }
+  }
 }
 
 .diy_table .col {
@@ -1081,8 +1104,9 @@ page .container .confirm-btn {
   display: inline-block;
   width: 100%;
   text-align: center;
-  background-color: #ebf4ff !important;
-  color: #8cb9f3 !important;
+  background-color: #3885cc !important;
+  border-radius: 40rpx;
+  color: #FFF !important;
 }
 .diy_table .warp .container .diy_img img {
   width: 100%;
