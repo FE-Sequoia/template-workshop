@@ -12,7 +12,7 @@
 		<button id="demox" class="bt1" type="primary" @click="click1" >发送</button>
 
 		</view>
-		<view id="lf" class="vw4 vw4-l const" v-for="(item,index) in msglist" >
+		<view id="lf" class="vw4 vw4-l const" v-for="(item,index) in msglist" :key="index">
 			<view class="nones-l">
 				<image class="nones-imgse"  mode="" style="width: 35px; height: 35px;"></image>
 				<view class="centers-ft">

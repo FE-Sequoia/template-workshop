@@ -4,7 +4,7 @@
 			<scroll-view style="height: 100%;" scroll-y="true">
 				<text class="chapter_list_title">章节列表</text>
 				<view style="margin-top: 5px;">
-					<view @click="changeChapter(index)" v-for="item,index in list" class="chapter_list" :class="{active: currentChapterIndex === index}">
+					<view @click="changeChapter(index)" v-for="(item, index) in list" :key="index" class="chapter_list" :class="{active: currentChapterIndex === index}">
 						<text class="chapter_index">第{{index + 1}}章</text>
 						<view class="chapter_name">{{item.chapter_name}}</view>
 					</view>

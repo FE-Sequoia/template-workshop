@@ -66,7 +66,7 @@
 		></list_tab>
 			<!-- 列表 -->
 							<view class="container">
-					<view v-for="(o,i) in list" class="row">
+					<view v-for="(o,i) in list" class="row" :key="i">
 										<view v-if="1 &&$check_field('get','product_name')" class="col">
 							<view class="view">
 								<view class="diy_title">

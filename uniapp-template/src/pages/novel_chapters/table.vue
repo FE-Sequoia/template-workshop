@@ -37,7 +37,7 @@
 						<!-- 列表 -->
 						<view class="warp">
 							<view class="container" style="padding: 10px;width: 100vw;box-sizing: border-box;">
-								<view v-for="(o,i) in list" class="row box_style">
+								<view v-for="(o,i) in list" class="row box_style" :key="i">
 									<view class="col">
 										<view class="view">
 											<view class="diy_title">

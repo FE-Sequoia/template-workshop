@@ -39,7 +39,7 @@
 		<!-- 列表 -->
 		<view class="warp">
 			<view class="container">
-				<view v-for="(o,i) in list" class="row">
+				<view v-for="(o,i) in list" class="row" :key="i">
 										<view v-if="1 && $check_field('get','title')" class="col">
 						<view class="view">
                           <view class="diy_title" v-if="true">

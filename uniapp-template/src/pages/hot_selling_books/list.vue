@@ -63,7 +63,7 @@
 		<!-- 列表 -->
 			<view class="warp" >
 			<view class="container">
-				<view v-for="(o,i) in list" class="row box_style">
+				<view v-for="(o,i) in list" class="row box_style" :key="i">
 							<view class="col" v-if="0 && $check_field('get','book_number')">
 						<view class="view">
 							<view class="diy_title" v-if="true">

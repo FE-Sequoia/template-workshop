@@ -11,7 +11,7 @@
     </uni-search-bar>
 	<view class="list_goods_wrapper a-start j-between">
 		<view class="goods-type-wrapper">
-			<view :class="'goods-type ' + selected_[index]" v-for="(item, index) in types" @click="searchType(item.value, index)">{{item.text}}</view>
+			<view :class="'goods-type ' + selected_[index]" v-for="(item, index) in types" :key="index" @click="searchType(item.value, index)">{{item.text}}</view>
 		</view>
 		<view class="goods_wrapper" v-if="$check_action('/goods/list', 'get')">
 			<list_goods :list="list"></list_goods>

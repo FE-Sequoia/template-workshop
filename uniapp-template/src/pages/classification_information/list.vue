@@ -52,7 +52,7 @@
 		<!-- 列表 -->
 			<view class="warp" >
 			<view class="container">
-				<view v-for="(o,i) in list" class="row box_style">
+				<view v-for="(o,i) in list" :key="i" class="row box_style">
 							<view class="col" v-if="1 && $check_field('get','product_category')">
 						<view class="view">
 							<view class="diy_title" v-if="true">

@@ -48,7 +48,7 @@
             <!-- 列表 -->
             <view class="warp">
               <view class="container">
-                <view v-for="(o,i) in list" class="row">
+                <view v-for="(o,i) in list" class="row" :key="i">
                   <view class="col">
                   </view>
                   <view class="col">
