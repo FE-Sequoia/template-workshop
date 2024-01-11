@@ -22,6 +22,7 @@ uni-button {
 }
 .uni-forms--top {
   padding: 16rpx 20rpx !important;
+  width: 300px;
 }
 .uni-forms-item__content {
   display: flex;
@@ -191,7 +192,8 @@ image {
 }
 .uni-select,
 .uni-easyinput__content {
-  min-height: 60rpx !important;
+  height: 50rpx !important;
+  min-height: 50rpx !important;
   border-radius: 40rpx !important;
   font-size: 24rpx !important;
   color: #666;
@@ -540,7 +542,7 @@ page .container .confirm-btn {
   width: 100%;
   flex-direction: row-reverse;
   border-bottom: 1px solid #f1f1f1;
-  padding: 0 !important;
+  padding: 0 20rpx !important;
 }
 
 // 图片
@@ -753,6 +755,8 @@ page .container .confirm-btn {
 .diy_detail .view {
   margin-top: 5px !important;
   display: flex;
+  border-bottom: 1px solid #eee !important;
+  margin: 0 10rpx !important;
 }
 
 .diy_detail .view .diy_title {
@@ -823,9 +827,14 @@ page .container .confirm-btn {
   // background-size: 100% 100% !important;
   // padding: 10px !important;
 }
+.uni-select__input-box,
 .diy_edit .uni-select__input-box {
-  // background-color: #f4f5eb !important;
   width: 100% !important;
+  height: 25px !important;
+
+  uni-text {
+    font-size: 28rpx !important; 
+  }
 }
 .diy_edit .row-item {
   background-color: #fff !important;
@@ -851,6 +860,25 @@ page .container .confirm-btn {
 }
 // 论坛页面列表
 // 发布按钮
+.diy_table_tml .change {
+  display: flex;
+  justify-content: flex-end;
+  .uni-stat__select {
+    margin-left: 20rpx;
+  }
+  .button {
+    width: auto !important;
+    height: 50rpx !important;
+    line-height: 50rpx !important;
+
+    uni-button {
+      font-size: 12px !important;
+      line-height: 50rpx !important;
+      background-color: #3885cc;
+      color: #fff;
+    }
+  }
+}
 .page_forum .change .button {
   background-color: #ebf4ff !important;
   color: #8cb9f3 !important;
@@ -1052,6 +1080,7 @@ page .container .confirm-btn {
   grid-template-columns: auto auto !important;
   gap: 20rpx 20rpx;
   padding-left: 10rpx;
+  justify-content: center;
 }
 .diy_table.diy_table_tml .box_style {
   width: auto;
@@ -1061,6 +1090,10 @@ page .container .confirm-btn {
 .diy_table_tml .table_padding_top .nav_left {
   background-color: #3885cc !important;
   color: #fff !important;
+  border-radius: 40rpx;
+  font-size: 24rpx;
+  padding: 0 30rpx !important;
+  line-height: 50rpx !important;
 }
 .diy_table_tml .table_padding_top {
   display: flex;
@@ -1307,7 +1340,7 @@ page .container .confirm-btn {
 }
 
 .list .item .right_block {
-  // min-width: 254px;
+  padding-right: 8rpx;
 }
 .uni-forms-item__label {
   min-width: 60px !important;
@@ -1377,9 +1410,13 @@ html {
 #exam_details .answer_btn_box {
   padding-left: 90px;
 }
-#exam_details .answer_btn_submit {
+.answer_btn_submit {
   background-color: #ebf4ff;
   color: #8cb9f3 !important;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  margin-top: 30rpx;
 }
 .uni-icons {
   left: -20px;
