@@ -6,32 +6,6 @@ html, body, #app, .page, .sign_in .warp .el-row .el-col.el-col-24 {
   height: 100%;
 }
 
-@font-face {
-  font-family: "element-icons"; /* Project id 4452781 */
-  src: url('../fonts/iconfont.woff2?t=1709538281957') format('woff2'),
-       url('../fonts/iconfont.woff?t=1709538281957') format('woff'),
-       url('../fonts/iconfont.ttf?t=1709538281957') format('truetype');
-}
-
-.side li:nth-of-type(3) .el-icon-news:before {
-  content: "\e60d" !important;
-}
-.side li:nth-of-type(4) .el-icon-news:before {
-  content: "\e6e3" !important;
-}
-.side li:nth-of-type(5) .el-icon-news:before {
-  content: "\e648" !important;
-}
-.side li:nth-of-type(6) .el-icon-news:before {
-  content: "\e6c0" !important;
-}
-.side li:nth-of-type(7) .el-icon-news:before {
-  content: "\e644" !important;
-}
-.side li:nth-of-type(8) .el-icon-picture-outline:before {
-  content: "\e67c" !important;
-}
-
 .form .el-input,
 .form .el-select {
   width: 100% !important;
